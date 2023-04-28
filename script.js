@@ -136,6 +136,28 @@ for(let i = 1 ;i <= 30; i++) {
     foodItem.style.top = top + "px";
     gameContainer.append(foodItem);
 
+	$(document).ready(function() {
+  // initialize game variables
+  var snakeSpeed = 100; // in ms
+  var currentDirection = "right"; // start moving right
+  var snakePosition = [{row: 20, col: 1}]; // start position
+
+  // function to move the snake
+  function moveSnake() {
+    // update snake position based on direction
+    // add new head pixel and remove tail pixel
+    // check for collisions with food and walls
+    // update score board
+
+    // set timeout to move again in snakeSpeed ms
+    setTimeout(moveSnake, snakeSpeed);
+  }
+
+  // start the game loop
+  moveSnake();
+});
+
+
 
 
     /*
